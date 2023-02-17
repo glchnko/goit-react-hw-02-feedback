@@ -6,9 +6,8 @@
     padding: 0;
 }
 .button{
-    background-color: #fff;
+    background-color: #53a22e;
     border-radius: 4px;
     min-width: 50px;
-    text-transform: capitalize;
     padding: 5px;
 }
