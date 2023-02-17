@@ -1,12 +1,11 @@
-.list {
+.list{
     list-style: none;
     display: flex;
     gap: 10px;
     margin: 0;
     padding: 0;
 }
-
-.buttonEl {
+.button{
     background-color: #fff;
     border-radius: 4px;
     min-width: 50px;

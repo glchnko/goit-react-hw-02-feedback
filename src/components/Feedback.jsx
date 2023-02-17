@@ -1,7 +1,7 @@
 import { Component } from "react";
 import Section from "./Section/Section";
 import Statistics from "./Statistics/Statistics";
-import Options from "./Options/Options";
+import FeedbackOption from "./FeedbackOption/FeedbackOption";
 import Notification from "./Notification/Notification";
 
 
@@ -19,12 +19,12 @@ class Feedback extends Component {
       });
   };
 
-  countTotalFeedback = () => {
+    countTotalFeedback = () => {
       const values = Object.values(this.state);
       return values.reduce((acc, item)=>{ return acc + item }, 0); 
   }
 
-  countPositiveFeedbackPercentage = () => {
+    countPositiveFeedbackPercentage = () => {
       const total = this.countTotalFeedback();
       const good = this.state.good;
       const value = Math.round(good/(total/100));
@@ -44,10 +44,10 @@ class Feedback extends Component {
       return (
         <>
           <Section title = {'Please leave feedback'}>
-            <Options>
-              options = { controls }   
-              onLeaveFeedback= { this.updStatistics }
-            </Options>
+            <FeedbackOption 
+                 options = { controls }   
+                 onLeaveFeedback= { this.updStatistics }
+              />
           </Section>
           <Section title = {'Statistics'}>
             { countTotalFeedback > 0 ? 
